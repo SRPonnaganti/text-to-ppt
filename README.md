@@ -26,3 +26,12 @@ cd backend
 python -m venv .venv && source .venv/bin/activate # Windows: .venv\\Scripts\\activate
 pip install -r requirements.txt
 uvicorn main:app --host 0.0.0.0 --port 8000
+```
+
+
+#### 2) Frontend
+```bash
+cd ../frontend
+npm install
+echo "NEXT_PUBLIC_API_BASE=http://localhost:8000" > .env.local
+npm run dev
